@@ -14,5 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return Redirect::away('https://telegram.me/SearchMegaMarketBot');
+});
+
+Route::post('getpay', function () {
+    Query::create([
+        "query"=> $request
+    ]);
 });
